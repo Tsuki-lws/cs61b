@@ -57,7 +57,7 @@ public class DessertTest {
                 .isEqualTo("I love dessert!");
 
         completed = true;
-        
+
 
         // Check that assertions were run
         if (!completed) {
