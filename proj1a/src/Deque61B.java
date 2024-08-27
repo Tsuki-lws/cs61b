@@ -7,59 +7,59 @@ import java.util.List;
 public interface Deque61B<T> {
 
     /**
-     * Add {@code x} to the front of the deque. Assumes {@code x} is never null.
+     * 将 {@code x} 添加到双端队列的前面。假设 {@code x} 永远不会为 null。
      *
      * @param x item to add
      */
     void addFirst(T x);
 
     /**
-     * Add {@code x} to the back of the deque. Assumes {@code x} is never null.
+     * 将 {@code x} 添加到双端队列的背面。假设 {@code x} 永远不会为 null。
      *
      * @param x item to add
      */
     void addLast(T x);
 
     /**
-     * Returns a List copy of the deque. Does not alter the deque.
+     * 返回 deque 的 List 副本。不改变 deque。
      *
      * @return a new list copy of the deque.
      */
     List<T> toList();
 
     /**
-     * Returns if the deque is empty. Does not alter the deque.
+     * 如果 deque 为空，则返回。不改变 deque。
      *
      * @return {@code true} if the deque has no elements, {@code false} otherwise.
      */
     boolean isEmpty();
 
     /**
-     * Returns the size of the deque. Does not alter the deque.
+     * 返回 deque 的大小。不改变 deque。
      *
      * @return the number of items in the deque.
      */
     int size();
 
     /**
-     * Remove and return the element at the front of the deque, if it exists.
+     * 删除并返回 deque 前面的元素（如果存在）。
      *
      * @return removed element, otherwise {@code null}.
      */
     T removeFirst();
 
     /**
-     * Remove and return the element at the back of the deque, if it exists.
+     * 删除并返回 deque 后面的元素（如果存在）。
      *
      * @return removed element, otherwise {@code null}.
      */
     T removeLast();
 
     /**
-     * The Deque61B abstract data type does not typically have a get method,
-     * but we've included this extra operation to provide you with some
-     * extra programming practice. Gets the element, iteratively. Returns
-     * null if index is out of bounds. Does not alter the deque.
+     * Deque61B 抽象数据类型通常没有 get 方法，
+     * 但是我们包含了这个额外的操作，以便为您提供一些
+     * 额外的编程练习。迭代获取元素。返回
+     * 如果 index 超出范围，则为 null。不改变 deque。
      *
      * @param index index to get
      * @return element at {@code index} in the deque
@@ -67,9 +67,9 @@ public interface Deque61B<T> {
     T get(int index);
 
     /**
-     * This method technically shouldn't be in the interface, but it's here
-     * to make testing nice. Gets an element, recursively. Returns null if
-     * index is out of bounds. Does not alter the deque.
+     *从技术上讲，此方法不应位于界面中，但它就在这里
+     * 使测试更好。以递归方式获取一个元素。如果满足以下条件，则返回 null
+     * index 超出范围。不改变 deque。
      *
      * @param index index to get
      * @return element at {@code index} in the deque
